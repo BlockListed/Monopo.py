@@ -7,7 +7,7 @@ class bank:
     
     def Command(self):
         # Do commandparsing and other shit
-        cmd = input("MonoShell $ ")
+        cmd = input("$ ")
         cmdparts = cmd.split(" ")
 
         # This is really ineffecient, but this is a simple program, also if I do it better it's gonna be a lot more work!
@@ -39,7 +39,7 @@ class bank:
 
     def subtract(self, account, amount):
         if self.MonoBank.get(account, "noacct") != "noacct":
-            self.MonoBank.update({account: (self.MonoBank.get(account) + amount)})
+            self.MonoBank.update({account: (self.MonoBank.get(account) - amount)})
             return f"Subtracted {amount} from {account} (New total {(self.MonoBank.get(account))})!"
         else:
             return f"Account {account} not found!"
