@@ -5,9 +5,10 @@ class bank:
         print("Initiated")
         self.MonoBank = dict({})
     
+    # Do commandparsing and other shit
     def Command(self):
-        # Do commandparsing and other shit
         cmd = input("$ ")
+        # Spliting the cmd into the Command and Arguments
         cmdparts = cmd.split(" ")
 
         # This is really ineffecient, but this is a simple program, also if I do it better it's gonna be a lot more work!
